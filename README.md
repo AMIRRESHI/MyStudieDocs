@@ -1,4 +1,4 @@
 # MyGit
 testing
 
-inside develop im
+added bug fix
