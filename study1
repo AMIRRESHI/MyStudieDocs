@@ -1,0 +1,161 @@
+router-outlet directive availble from router package & where to display view
+
+router package directives: 1. routerLink:'/link'  specifies the path
+						   2. routerLinkActive: ""
+							
+@angular/router
+setup route array: -> requrest path	-> check in that array & router has states means which state you are in						
+<a [routerLink]="['/animals'], animal.name">
+
+component on intialised once when the first route is navigated to , any child routes navigated to after that wont be called on with ngonint
+Rotuer is singleton
+-> prarmetrised routes
+-> wild card , query params , child routes, modules with specific routes, lazy loading, route guard, 
+
+RouterModule.forRoot() - > forroot make it available for the entire application
+
+activatedRoute to get route params
+
+Redirect Routes -> path when empty then pathmatch should be full
+
+
+ProvideIn: at component level (makes tree shaking active)
+DI token created, Goes to DI container, check for how to inject class create/use existing
+
+provider: [useClass, useExisting, how to & not to make a dependencyInjection tree shakable by mentioning provideIn: 'root' or 'any'
+		useValue: to pass any value from module/feature module & then we can use Inject property inside the constructor to loader different key depending upon different modules, useFactory: means to load different object based on the business logic  ]
+		
+Angular 3 skipped because core version was ahead of all
+March/Oct releases
+Anguar 5 http depcreated & httpclient was introduced
+In Angular 7 virtual scrolling was introduced
+Angular 8 has differential loading of browsers, with this you can deploy your application
+Angular 9 (major release)
+Ivy compliler
+
+Ivy: smaller(tree shakable: dead code elimination), faster comilation(check for those what only changed), better debugging(can do template debuggin), improved type safety, faster testing, improved build error, improved internationalization
+	improved css class & style binding, easier to ship, angular material will ship fully comiled code
+	its kind of excucutable representation how to create/update template
+	If Di is not used ivy will removve it
+
+earlier build: dev/AOT
+AOT: if there is any error fix that time only, if not fixed application will not compile e.g garbage collection
+before version there were view engines
+compiler: to transform written in angular directive syntax into js instructions enriched with changes detection 
+runtime: executable code prduced by angular
+parsing & executing
+angular material then angular & now material comes with precompiled
+previously since we are in shipping AOT compiled code every project code would have to recompile every component library its using but now we are able to ship actual aot compiled code as part of npm when you do ng build its just build your app
+locality principle: single file compilation 
+ng-if doest need to know its dependiencies nothing else is requried to recompile it
+AOT: Rendering faster precompiled & loads executable code
+	inlines all the html & css by not making the ajax call for those
+	Reduction in injection better security
+jit vs aot jit compiles app at tuntime, it has to donwload compiler jit
+	jit bundle code larger as its having compiler code also
+
+***********
+
+Dynamic component:
+	directive -> *ngComponentOutlet=dummyComponnet
+EntryComponent spicifies list of components that should be compiled when the module is defined which will store component factory resolver 	
+EntryComponent not required in Anguar9 because of IvyRender
+
+
+Angular bootprocess: on ng-serve angular code compilation happens converting ts code into js. The module is bootstraped meaning, dynamically selector code is attached to index.html . first cmponent, the module should load
+package json -> calls build config in angular.json
+
+Dependencies -> all required to run in prod
+devDep -> must to develop app
+major, minor, minor-patches
+ng-test -> test & run all our unit test
+ng-build -> build your app & make it ready for production deploymernt
+@Decorator -> definition what it has
+
+component is also directive
+
+Directive -> to extentd, change, modify html giving new syntax
+1. component : default app comp
+2. Structural: updates structure of view, ngFor, ngIf, ngSwitch: ngswitchCase-ngSwitchDefault, shape/reshape dom, recognize it with * sign
+	[ngSwitch]=""
+3. Attribute: ngStyle, ngClass(build InDirectives)
+4. customDirective: 
+
+
+Data Binding - interaction of all files in component
+1. One-way: 
+	conponent to view:
+		Interpolation 
+		property binding: we write it in square brackets, we can bind any/mulitple properties to dom e.g [innerHtml], [title], [src] [alt], [placeholder], 		[style.color], [ngClass]="expresssion"
+		Style binding
+		Attribute binding: [arrt.<name>]="experession" e.g colspan example
+	view to component:
+		Event binding: (click)="method()"
+2. two-way: -> <- kind of combination of property+event binding ng-model(its a built in directive)
+3. pipes -> used to transform data
+	Built In pipes:
+		Lowercase, Uppercase, Currency, Date, Percent, JSON
+	paratemertised
+		currency: which country {{ currencyValue | currency: 'usd' }}
+	chaining
+		{{ dob | date | upperCase }}
+	custom pipes
+	
+Forms:
+		2 way data binding 
+		change traking
+		Validations
+		Error handling
+		Unit testing
+	Form types
+		Static /Template driven
+		Dynamic/Reactive form
+		
+Change Detection: track updated changes in app state & render it.. 		
+ExpressionChangedAfterItHasBeenCheckedError comes in development mode only
+Zones just tell angular when do run changedetection. it has all asyn api in browser & when the code interacts with one of those api it causes change detection to accur
+
+Angular creates instance of components it has to create dom nodes for these html elements.. place for angular to put this reference because component is destroyed remove these dom nodes.. As comiler goes throught the template it checks for bindings.. Internally it checks for views.. Dirty checking prev vs current
+
+CheckAndUpdateVeiw()
+
+Angular Ivy: ivy compiler & runtime by default
+view engine takes templ & translates in js/html
+
+Css:
+_ngContent-c1 attribute get added in dom for styling & styling has that attribute (chosen by angular team) 
+added as an attribute in @component decorator :host-context binding
+:host is a special selector provided for angular components -> 1 level up
+encapsulation: emulated (its the default 1- scoped styles)
+Native: uses native behaviour of browsers.. might change in furture not to be used now
+ShadowDom: external/internal styles dont share
+showdomDom: new dom feature to creatre cusotom componnents(by default its off.. turn it on in setting e.g video player buttons)
+
+ngAfterContentInit(): called after a directive content has been fully initialised, invoked after anuglar performs any content projection,
+					 - Once. After the external content is injected by the parent though ngContent @contentChild available.
+					 - your projected content gets initialised before the view that is why content child is not accesible inside the component, @contentChild will not work in component-> it given undefined because  your content hasn't been intialised..
+ngAferViewChecked(): update property of parent component after angular checked the parent component // gives error & works in ngOninit..
+					- Once. After the component & child views are initialised. @ViewChild is available
+both ***Checked are related functions are related to Change Detection
+
+@HostListner: can listen to events on dom host e.g by using moveover click events
+@Hostbinding: can listen to events & change properties of the element e.g add border on hover 
+
+RXJS:
+Observabe: tracking state with observables, mechanism to track changes on
+Promise: single value, Not lazy,cant be cancelled, 2 paramerters callback func: o & rejected
+Subscribe: Emits Xultiple values, lazy, can be cancelled, 3 parameters next, error, complete
+			after error it doesnt got to complete
+			
+async await: better way of handling promises	
+javascript promises came in ES6
+async await just uses promise behind the scenes new feature with ES8, looks like sync code
+
+
+javascript:
+JS objects are muttable: it can be chaged/updated
+`
+for...of skips protoype added, You can stop or break a for...of loop at anytime
+for...in iterate protoype
+for/in and forEach() skip empty elements, also known as "holes", in the array
+forEach() does not support break.
