@@ -1,0 +1,86 @@
+git remote set-url origin https://amirreshi@bitbucket.org/amirreshi/angular-ngrx-starter.git
+
+
+git remote add amirreshi https://bitbucket.org/amir-proj.git
+git commit -m 'first comit'
+git branch -a
+git branch -r
+git push --set-upstream origin master
+git branch --track origin master
+git branch --track
+git push origin master
+git checkout -b new branch
+git push origin code-work-withoutErrors
+git merge --abort
+git reset flename
+
+
+git remote add origin https://amirreshi@bitbucket.org/amirreshi/angular-ngrx-starter.git
+
+angular-ngrx-starter
+
+https://github.com/Angular-RU/angular-ngrx-starter.git
+https://github.com/Angular-RU/angular-ngrx-starter.git
+
+
+*************new proj*****************
+ng new projname
+add @ngrx/store
+
+********************************
+npm install @ngrx/schematics --save-dev
+npm install @ngrx/{store,effects,entity,store-devtools,router-store} --save
+ng config cli.defaultCollection @ngrx/schematics
+
+Store Command
+ng generate store State --root --statePath store/reducers --module app.module.ts
+
+Effect Command
+ng generate effect store/App --group --root --spec false --module app.module
+
+Actions
+ng generate action store/actions/auth
+
+Reducers
+ng generate reducer store/reducers/auth --reducers index.ts
+
+Effects
+ng generate effect store/effects/auth --module app.module --root true
+
+Add Welcome Component
+ng generate container welcome --state store/reducers/index.ts --stateInterface State
+
+Entity
+ng generate selector store/entity/auth
+************************
+ng g class models/tutorial --type=model
+ng g class coffee --type=module
+ng g class header-routing --type=module
+ng g guard guards/tutorial
+ng generate entity store/reducers/tutorial --reducers index.ts
+
+ng g c components/create --spec=false
+
+skip-import
+
+
+198766
+
+50 1 point
+monthly bonus 1000 points = 250
+18k 6000 cashback 7000
+24000 cashback 9000 rs  tanish voucher 10,000
+1 lakh
+
+5081 -> 
+
+20 jan to 19-april
+
+
+
+
+
+
+
+
+
