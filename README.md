@@ -1,6 +1,0 @@
-# MyGit
-
-
-
-master code
-
