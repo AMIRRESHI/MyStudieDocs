@@ -19,8 +19,27 @@ activatedRoute to get route params
 Redirect Routes -> path when empty then pathmatch should be full
 
 
-ProvideIn: at component level (makes tree shaking active)
-DI token created, Goes to DI container, check for how to inject class create/use existing
+ProvideIn: at component level (makes tree shaking active) root
+For singleton use injectable root approach.
+DI token created, Goes to DI container, check for how to inject class create/use existing. 
+CourserService injected by angular. How angular is creating this couses service ?
+NullInjector DI of angular doesnot know how to create its dependency. DI has to create an object of it somehow & which is being done by provider. provider will give DI a function know as factory function, generates the dependncy when it sees that its needed & passes it to the part of application.. provider provides dependency
+We need to give our DI a unique name called token & instantiate that injectionToken
+provide: 'its the unique token mentioned here meaning we have uniquely identified the dependency we are configuring', now provide the provider function  useFactory: courserService, deps: 'it requuires other dependencies e.g httpclient'. 
+Angular support className as injection tokens, becoz className exists at runtime under the form of a constructor function. Interface doesnot exist at runtime as it bein compile time instruct only. Using useClass angular knows that it need to call new constructor on this class & it needs to provide the needed dependencies. Manual injection token are not are not required anymore, becoz anngualr is internally using classname as uniqueidentifire. To tell angular injector about our employee service we need to rRegister the service with angular injector. If a service is not injected in the bundle they are not included in the bundle
+
+Inject decorator is usefull when we cant use class as DI token
+Resolution modifiers :
+	optional:			
+	self:
+	skipSelf:
+	host:
+
+class Providers:
+	useClass				provider & useClass -> from where to create an object
+	useExisting				use an existing object 
+	useFactory				to make providers your providers more flexible
+	useValue				used as injection token
 
 provider: [useClass, useExisting, how to & not to make a dependencyInjection tree shakable by mentioning provideIn: 'root' or 'any'
 		useValue: to pass any value from module/feature module & then we can use Inject property inside the constructor to loader different key depending upon different modules, useFactory: means to load different object based on the business logic  ]
@@ -115,7 +134,7 @@ Change Detection: track updated changes in app state & render it..
 ExpressionChangedAfterItHasBeenCheckedError comes in development mode only
 Zones just tell angular when do run changedetection. it has all asyn api in browser & when the code interacts with one of those api it causes change detection to accur
 
-Angular creates instance of components it has to create dom nodes for these html elements.. place for angular to put this reference because component is destroyed remove these dom nodes.. As comiler goes throught the template it checks for bindings.. Internally it checks for views.. Dirty checking prev vs current
+Angular creates instance of components it has to create dom nodes for these html elements.. place for angular to put this reference because component is destroyed remove these dom nodes.. As comiler goes through the template it checks for bindings.. Internally it checks for views.. Dirty checking prev vs current
 
 CheckAndUpdateVeiw()
 
@@ -132,7 +151,7 @@ ShadowDom: external/internal styles dont share
 showdomDom: new dom feature to creatre cusotom componnents(by default its off.. turn it on in setting e.g video player buttons)
 
 ngAfterContentInit(): called after a directive content has been fully initialised, invoked after anuglar performs any content projection,
-					 - Once. After the external content is injected by the parent though ngContent @contentChild available.
+					 - Once. After the external content is injected by the parent through ngContent @contentChild available.
 					 - your projected content gets initialised before the view that is why content child is not accesible inside the component, @contentChild will not work in component-> it given undefined because  your content hasn't been intialised..
 ngAferViewChecked(): update property of parent component after angular checked the parent component // gives error & works in ngOninit..
 					- Once. After the component & child views are initialised. @ViewChild is available
@@ -146,6 +165,7 @@ Observabe: tracking state with observables, mechanism to track changes on
 Promise: single value, Not lazy,cant be cancelled, 2 paramerters callback func: o & rejected
 Subscribe: Emits Xultiple values, lazy, can be cancelled, 3 parameters next, error, complete
 			after error it doesnt got to complete
+Observalue can be sync/asyc but promise are always async
 			
 async await: better way of handling promises	
 javascript promises came in ES6
@@ -159,3 +179,69 @@ for...of skips protoype added, You can stop or break a for...of loop at anytime
 for...in iterate protoype
 for/in and forEach() skip empty elements, also known as "holes", in the array
 forEach() does not support break.
+The for–in loop is for looping over object properties.
+The for–of loop is for looping over data—like the values in an array.
+
+pure pipe : dont use function calls in teamplate instead pure pipe benefit is it triggers datatransformation or calculation only incase input has been changed when function will be excuted everytime changedetection runs
+
+lazy loaded modules creates its own injector which are children for our root injector
+child model injector ? lazy loading 
+
+
+**************
+click event bubbles up to the component hierarchy however custom event doesnot
+
+conditional styles [ngClass]= string array configObject => state classes
+[ngStyle] same as above
+[ngSwitch]="course.category"
+
+pipe to trasform data & display in another form to the user
+http header identifying the user 
+
+Content projection: to create configurable component
+partial content proj: using select 
+
+host element is on which the directive is applied
+
+first constructor gets called then inputs are calculated
+ngDoCheck customChangeDetection
+
+afterViewChecked setting the focus after getting the new data or scrolling to some place after getting the data
+
+
+Jasmine spy
+jasmine.createSpyObject
+
+jasmine behaviour driven
+test are know as testsuit
+karma used internally by angular cli
+expect(result) to be4
+expect(result) to be4 tohavebeencalledtimes
+mock all dependencies
+ecpect(coursees)tobetruthy
+fit to focus our furntion execution
+exppectone('api/courses')
+zonejs to implement change detection
+tick utility controls the evoution of time inside a fake async zone
+
+all js objects by default are mutable meaning we can change any property without replacing the object
+angular is trying to diplay  data from mutable objects on the screen if anything happens at the browser e.g a native dom click event, timeout etc that asyc event will modify the data
+onPush : important to avoid to mutate data directly at the level of the view
+
+attibute directive (one time binding): type="beginner" instead of [type]="'beginner'"
+changeDetectorRef to implement custom change detection in ngDoCheck event. each component has changeDetectorRef
+
+event
+1. dom eventor custom event
+2. input data has changed
+3. observable with async has changed any data
+
+viewChild quering we can get reference to dom element/component (ngAfterVViewInit)
+
+contentChild to see through the projected content elements. The scope of the contentChild query is what is there inside ng content.
+restrickted to the content part of the componnet. contentChild query cant see anything in the parent template. if we require programatic reference to projected content then use contentChild
+
+ng:deep to bypass angular style encapsulation whatever css comes after ngDeep dont make that component specific
+ngAfterContentChecked: called after the projected content part is checked for changes
+both lifecycle hook are called with every change detection execution 
+
