@@ -33,3 +33,40 @@ na canada
 emea middle east africaz
 
 https://employee-list.stackblitz.io/ -> online exercise
+
+filter
+replace
+match
+split
+spread oprator
+
+
+// Longest String in Array
+// Most Commonly Used Char in String
+// Two Strings Are Anagrams of Each Other
+// String Permutation is Palindrome?
+// Armstrong Numbers
+// Sorting Objects
+
+
+//Max character count
+//Longest String in an Array
+
+let str = 'amir welcome to programing';
+[...str].filter(char => char === 'a').length
+
+
+str.split('o').length - 1
+
+let str = 'amir welcome to programing';
+str.indexOf('amir')
+
+let str = 'amir welcome to programing amir';
+let words = str.split(' ');
+words.filter(word => word === 'amir').length
+
+let str = 'amir welcome to programing amir';
+let words = str.split(' ');
+words.indexOf('amir');
+
+let array = [ firstName: 'Amir', lastName: 'Doe'];

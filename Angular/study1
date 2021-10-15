@@ -25,8 +25,8 @@ DI token created, Goes to DI container, check for how to inject class create/use
 CourserService injected by angular. How angular is creating this couses service ?
 NullInjector DI of angular doesnot know how to create its dependency. DI has to create an object of it somehow & which is being done by provider. provider will give DI a function know as factory function, generates the dependncy when it sees that its needed & passes it to the part of application.. provider provides dependency
 We need to give our DI a unique name called token & instantiate that injectionToken
-provide: 'its the unique token mentioned here meaning we have uniquely identified the dependency we are configuring', now provide the provider function  useFactory: courserService, deps: 'it requuires other dependencies e.g httpclient'. 
-Angular support className as injection tokens, becoz className exists at runtime under the form of a constructor function. Interface doesnot exist at runtime as it bein compile time instruct only. Using useClass angular knows that it need to call new constructor on this class & it needs to provide the needed dependencies. Manual injection token are not are not required anymore, becoz anngualr is internally using classname as uniqueidentifire. To tell angular injector about our employee service we need to rRegister the service with angular injector. If a service is not injected in the bundle they are not included in the bundle
+provide: 'its the unique token mentioned here meaning we have uniquely identified the dependency we are configuring', now provide the provider function  useFactory: courserService, deps: 'it requires other dependencies e.g httpclient'. 
+Angular support className as injection tokens, becoz className exists at runtime under the form of a constructor function. Interface doesnot exist at runtime as it being compile time instruct only. Using useClass angular knows that it need to call new constructor on this class & it needs to provide the needed dependencies. Manual injection token are not are not required anymore, becoz anngualr is internally using classname as uniqueidentifire. To tell angular injector about our employee service we need to register the service with angular injector. If a service is not injected in the bundle they are not included in the bundle
 
 Inject decorator is usefull when we cant use class as DI token
 Resolution modifiers :
@@ -42,7 +42,7 @@ class Providers:
 	useValue				used as injection token
 
 provider: [useClass, useExisting, how to & not to make a dependencyInjection tree shakable by mentioning provideIn: 'root' or 'any'
-		useValue: to pass any value from module/feature module & then we can use Inject property inside the constructor to loader different key depending upon different modules, useFactory: means to load different object based on the business logic  ]
+		useValue: to pass any value from module/feature module & then we can use Inject property inside the constructor to load different key depending upon different modules, useFactory: means to load different object based on the business logic  ]
 		
 Angular 3 skipped because core version was ahead of all
 March/Oct releases
@@ -129,6 +129,11 @@ Forms:
 	Form types
 		Static /Template driven
 		Dynamic/Reactive form
+
+pure pipe : dont use function calls in teamplate instead pure pipe benefit is it triggers datatransformation or calculation only incase input has been changed when function will be excuted everytime changedetection runs
+
+lazy loaded modules creates its own injector which are children for our root injector
+child model injector ? lazy loading		
 		
 Change Detection: track updated changes in app state & render it.. 		
 ExpressionChangedAfterItHasBeenCheckedError comes in development mode only
@@ -160,6 +165,7 @@ both ***Checked are related functions are related to Change Detection
 @HostListner: can listen to events on dom host e.g by using moveover click events
 @Hostbinding: can listen to events & change properties of the element e.g add border on hover 
 
+************************************************************************************************
 RXJS:
 Observabe: tracking state with observables, mechanism to track changes on
 Promise: single value, Not lazy,cant be cancelled, 2 paramerters callback func: o & rejected
@@ -171,7 +177,32 @@ async await: better way of handling promises
 javascript promises came in ES6
 async await just uses promise behind the scenes new feature with ES8, looks like sync code
 
+steam of values e.g click on browser page
+setInterval()
+setTimeout() ->  emits only 1 value, no way it could emit an error
+in observable subscribe main funda is that, "do not nest subscribe calls"
+shareReplay(), tap(), map(), map(),
+concat() -> sequentialy completes if a, b, c. if one fails it stops there
+fromObservable() it takes a promise & converts it into the observable
+concatMap() e.g form save on changes should triggers server call sequentialy to save the data. If the order of the observable is important use it
+merge() to execute the things in parallel
+mergeMap() If the order of the observable is not important, in parallel use it
+exaustMap() ignoring extra values while current observable is still ongoing e.g mulitple save clik some save clicks will be ignored
+switchMap() e.g searchType ahead cancel ongoing request & then switch to the new http request
+debounceTime()
+distinctUntillChanged()
+catchError()
+finalize() to release resources on error
+retryWhen() on fail retry after few seconds
+delayWhen()
+startWith() start with may be some inital value e.g "" empty string
+throttle() limit the output by limiting the number values that can be emitted in a certain interval
+throttleTime() better than throttle
+forkJoin() launch several tasks in parallel. paralley call 2 http wait till both execute & then join both together
+behaviourSubject() always provide something to subscribers even if the subscription happen late we still want to get the latest values emitted by the observable befor the subscription & also pass the inital value
+withLatestFrom() allows to combine mulitple observables together long ruiing or not by taking the latest value emitted from each observable & providing that to the next observable in th
 
+************************************************************************************************
 javascript:
 JS objects are muttable: it can be chaged/updated
 `
@@ -182,10 +213,13 @@ forEach() does not support break.
 The for–in loop is for looping over object properties.
 The for–of loop is for looping over data—like the values in an array.
 
-pure pipe : dont use function calls in teamplate instead pure pipe benefit is it triggers datatransformation or calculation only incase input has been changed when function will be excuted everytime changedetection runs
+ 
+Arrow functions are lexically bound to this keyword, unlike the normal functions which are dynamically bound.
+Arrow functions cannot be used as a method and constructors
 
-lazy loaded modules creates its own injector which are children for our root injector
-child model injector ? lazy loading 
+1.) Arrow Functions do not have a binding with this, i.e. arrow functions do not have their own this.
+arrow functions dont rebind this 
+if we refactore settimeout callback fucntion to arrow function.. in other words with arrow syntax this in not reset instead it inherits this in the context in which this code is defined
 
 
 **************
@@ -205,6 +239,8 @@ host element is on which the directive is applied
 
 first constructor gets called then inputs are calculated
 ngDoCheck customChangeDetection
+it called before ngOninit() & subsequently when any of the input proper change. ngOnchanges will only get triggered if the input object itself changes not if its one of the property changes
+Unidirectional data flow in angular application
 
 afterViewChecked setting the focus after getting the new data or scrolling to some place after getting the data
 
