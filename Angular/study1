@@ -202,6 +202,13 @@ forkJoin() launch several tasks in parallel. paralley call 2 http wait till both
 behaviourSubject() always provide something to subscribers even if the subscription happen late we still want to get the latest values emitted by the observable befor the subscription & also pass the inital value
 withLatestFrom() allows to combine mulitple observables together long ruiing or not by taking the latest value emitted from each observable & providing that to the next observable in th
 
+To read: 
+
+forkjoin vs combine latest
+sentry: performance tuning
+hot & cold observable
+box sizing
+
 ************************************************************************************************
 javascript:
 JS objects are muttable: it can be chaged/updated
