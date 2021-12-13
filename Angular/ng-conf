@@ -1,0 +1,30 @@
+    ng-conf 2015 Day 1 Keynote - Brad Green and Igor Minar
+deep tree : speed
+virtual scrolling table
+
+    These ARE the Angular tips you are looking for | John Papa
+learn ngrx/data & azure serverless function direct deploy
+
+    Mastering the Subject: Communication Options in RxJS | Dan Wahlin
+data sharing event bus, subjects ectc
+
+    Day 1 Keynote | Jessica Janiuk, Emma Twersky & Stephen Fluin | ng-conf 2021
+strict by default in angular 12
+sass working for inline styles as well
+sass package instead of node-sass & its backward compataible
+protactor e2e tool
+post css e.g tailwind in v12
+check out ngx-forms-typed
+
+    Increase your productivity with component stories | Dan Wahlin | ng-conf 2021
+storybook/angularplayground    
+
+    Federated Angular: Why and How?| Manfred Steyer | ng-conf 2021
+Microfrontend.. Beauty is webpack5 for MFE    e.g diff domains account/loan/stocks 
+
+    SPA as Platform with Micro-Frontends & Capabilities | Saranya Thangaraj | ng-conf 2021
+    
+
+    new video 
+   optimisintg apps with resource inlining
+
