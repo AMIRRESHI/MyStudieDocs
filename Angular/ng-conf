@@ -1,13 +1,24 @@
+********************ng-conf 2015**********************
     ng-conf 2015 Day 1 Keynote - Brad Green and Igor Minar
 deep tree : speed
 virtual scrolling table
+********************ng-conf 2015**********************
 
+
+********************awesome**********************
     These ARE the Angular tips you are looking for | John Papa
 learn ngrx/data & azure serverless function direct deploy
+********************awesome**********************
 
-    Mastering the Subject: Communication Options in RxJS | Dan Wahlin
-data sharing event bus, subjects ectc
 
+
+********************ng-conf 2021 Workshops**********************
+Angular for Architects Workshop w/ John Papa & Dan Wahlin | April 13-15, 2021 | ng-conf 2021 Online
+********************ng-conf 2021 Workshops**********************
+
+
+
+********************ng-conf 2021**********************
     Day 1 Keynote | Jessica Janiuk, Emma Twersky & Stephen Fluin | ng-conf 2021
 strict by default in angular 12
 sass working for inline styles as well
@@ -23,8 +34,229 @@ storybook/angularplayground
 Microfrontend.. Beauty is webpack5 for MFE    e.g diff domains account/loan/stocks 
 
     SPA as Platform with Micro-Frontends & Capabilities | Saranya Thangaraj | ng-conf 2021
+
+    Ionic Angular: Making Capacitor Flux with NativeScript | Nathan Walker & Osei Fortune | ng-conf 2021
+ionic picture in video
+
+    Routeception! How to use the Angular Router in Micro-Frontends | Kyle Cannon | ng-conf 2021
+code available for microfrontend nested tree component
+
+    Prefer Template-Driven Forms | Ward Bell | ng-conf 2021
+template driven awesome example
+
+    Living La Vida Transloco - On the New Player in i18n/l10n | Inbal Sinai | ng-conf 2021
+
+    Using WebAssembly to Build Fast & Secure Web Apps | Eric Simons | ng-conf 2021
+stackblitz amazing
+
+    Reactive Error-Handling in Angular | Maria Korneeva | ng-conf 2021
+Error-handling
+
+    Easy healthy tests with component harnesses | Annie Wang | ng-conf 2021
+testing
+
+    Crafting Bespoke PWA experiences with Angular | Mark Thompson | ng-conf 2021
+pwa schematic, great topic for pwa    
+
+    Scully Scully Bo Bully Banana Fana Bo Fully Me My Mo Mully | Mike Brocchi | ng-conf 2021
+scully - pre render app before deployment
+
+    Angular and Core Web Vitals | Minko Gechev & Houssein | ng-conf 2021
+font inlining
+first contentfull paint, largest contentfull paint   
+critters - tool developed by chrome team - matches selectors at build time
+SSRendering - happens at build time means you have 0 runtime cost.. uses page markup on request which is done inline
+
+    Choose Your Own { Form } Adventure | Jennifer Wadella | ng-conf 2021
+contains form examples
+
+    Best Friends Forever: Reactive Code + Animations | Zack DeRose & Nicole Oliver | ng-conf 2021
+rxjs/animation examples
+
+    5 Typescript Tricks for Angular | Alain Chautard | ng-conf 2021
+json2ts.. its amazing    
+
+    The Dance of the Decorated Classes: Inside the Angular Compiler | Alex Rickabaugh & Joost Koehoorn
+
+    4 Wicked RxJS Pipelines for the Real World | Deborah Kurata | ng-conf 2021
+Aming rxjs session - must watch examples
+
+    Tailwind: The Future of CSS is Here! | Amadou Sall | ng-conf 2021
+tailwind - amazing future of css - examples
+
+    Making Techno Reactive with RxJS | Max Bendick | ng-conf 2021
+music dj examples
+
+    Control Your Data's Flow with HTTP Interceptors | John Papa | ng-conf 2021
+Amazing detailed video by papa for http request pipeline...  we can use axios/fetch also instead of httpclient - examples
+
+    My Observable Will Go On! | Jan-Niklas Wortmann | ng-conf 2021
+error handling in rxjs - good to have an idea
+
+    Headless CMS - Build Apps, Not Content | Erik Slack | ng-conf 2021
+use headless cms with angular to build apps   
+
+********************ng-conf 2021**********************
+
+
+
+********************EnterpriseNG 2020: Presentations**********************
+    Adding Real Time Collaboration to Angular Apps with Fluid | Dan Wahlin | EnterpriseNG 2020 #ngconf
+real time collaboration for adding/viewing/removing notes
+https://fluidframework.com/  
+
+    Angular Performance in the Enterprise | Minko Gechev | EnterpriseNG 2020 #ngconf
+very important optimization
+
+    Keynote – Present and Future of Angular | Jules Kremer & Misko Hevery | EnterpriseNG 2020 #ngconf
+byelog status
+angular roadmap
+angular locatlization with ivy - by pete bacon
+faster ngcc builds
+hot module reloading    
+
+    Create unfair competitive advantage w/CI/CD Pipelines | Alice Paquette | EnterpriseNG 2020 #ngconf
+Ci/cd deliver pipeline
+
+    Deploying Secure Angular Apps that Scale | John Papa | EnterpriseNG 2020 #ngconf
+learn how to deploy apps for any framework - with Azure
+
+    Framework Inception with Micro Frontend Composition | Lukas Ruebbelke | EnterpriseNG 2020 #ngconf
+
+    Nx for Angular CLI Users | Jeff Cross & Katerina Skroumpelou | EnterpriseNG 2020 #ngconf
+headless - test will be rerun on every change
+Nx dependency graph
+nx parallelises tasks
+nx maintains its own dependency graph & we can handle/create new libraries for each project.. make ci/cd pipeline inteligently
+with addition of cache the builds will be very faster
+faster builds & performance for ci/cd
+
+    RxJS Patterns in Angular | Deborah Kurata | EnterpriseNG 2020 #ngconf
+higher order mapping operator -  to use to check which operator will suit
+subscribe to inner observable flatterns the return value observale<T> & automatically unsubscribing to the inner observable
+switchMap - stops the current operation & performs new
+mergeMap - performs each operation concurrently
+concatMap - performs each operation one at a time, in order
+combineLatest - 
+merge - 
+forkjoin -
+Amazing video
+
+    Speed up! Incremental Compilation with Nx | Juri Strumpflohner | EnterpriseNG 2020 #ngconf
+nx-affected:deep graph   
+computation testing
+nx-cloud cache is synced across the team --> more performace if linked with ci server(bild, test , lint)
+local cache can be replaced by cloud cache
+Incrematal builds
+
+    Sustainable Angular Architecture | Manfred Steyer | EnterpriseNG 2020 #ngconf
+incremental compilation    
+divide apps in libs/shared/common/domain/sub-domians
+flight - example booking, luggage, checkin, onboarding
+
+    Testing NgRX | Cecelia Martinez | EnterpriseNG 2020 #ngconf
+testing with cypress    - example tv show - test ngrx store
+
+    TypeScript for Every Part of Your Stack | Ryan Chenkie | EnterpriseNG 2020 #ngconf
+
+    What's new in Angular 11 | Mark Thompson | EnterpriseNG 2020 #ngconf
+
+    Configuring Angular Libraries with Monorepos | Nishu Goel | EnterpriseNG 2020 #ngconf
+monorepo
+
+    Filling the Gap in State with NgRx ComponentStore | Alex Okrushko | EnterpriseNG 2020 #ngconf
+effects control race condition 
+adding first item to cart may take time but adding the second prod. to cart is completed    
+
+********************EnterpriseNG 2020: Presentations**********************
+
+********************ng-conf 2021 Lightning Talks**********************starts
+
+    Run an Angular app locally with Docker and Nginx | Drew Shirts | Lightning Talks 2021 #ngconf
+docker setup   
     
+    Lazy Loading Recipes | Pankaj Parkar | Lightning Talks 2021 #ngconf
+indian very nice talk - great examples
+
+    Less Angular Could be More Angular | John Papa | Lightning Talks 2021 #ngconf
+john papa - very nice examples  hero app
+
+    Dynamically loading modules & components with dependencies |Jay Bell | Lightning Talks 2021#ngconf
+
+    Angular and Stencil working together | Gabriel Quispe Rosas | Lightning Talks 2021 #ngconf
+
+    Complex Array-Based Reactive Forms Made Easier w/ This Trick | Yaakov Chaikin | Lightning Talks 2021
+example form
+
+    Quickly creating a complete search with RxJS | Vicentiu bacioiu | Lightning Talks 2021 #ngconf
+search example
+
+    Top 5 methods to Authenticate users in your Angular app | Souvik Basu | Lightning Talks 2021 #ngconf
+captcha
+social login
+magic link
+MFA biometric question otp qr code
+sms verification
+
+    How NOT to rewrite your legacy projects | Robert & Dominika | Lightning Talks 2021 #ngconf
+optimise images to squoosh.app to decrease image size
+use lighthouse
+
+    Conditionally Change the Template of Your Component | Preston Lamb | Lightning Talks 2021 #ngconf
+reach out to Preston Lamb for help
+
+    Angular Evergreen VS Code Extension | Doguhan uluca | Lightning Talks 2021 #ngconf
+angular evergreen extention to download
+
+    Codeless Component | Michael Callaghan | Lightning Talks 2021 #ngconf
+it contans simple loader example
+
+    The secret weapon of becoming an Angular superstar on your team! | Kate Sky | Lightning Talks 2021
+
+    Build Times and Bundle Sizes with Angular Ivy | Joel Parks | Lightning Talks 2021 #ngconf
+Amazing video must watch.. Ivy build 
+
+    Building a Micro Frontend Architecture in 5 Minutes | Jason Neal | Lightning Talks 2021 #ngconf
+
+    Angular Flex-Layout | Duncan Faulkner | Lightning Talks 2021 #ngconf
+flexlayout
+
+    Be elated! Keep content updated! | David Shevitz | Lightning Talks 2021 #ngconf
+sync validator fist & last letter of the username should be same
+async validator username should be unique -  will do validator after hiitng api
+
+
+
+
+
+********************ng-conf 2021 Lightning Talks**********************ends
+
+
+
+
+
+
+
+
+
 
     new video 
    optimisintg apps with resource inlining
 
+   Optimizing an Angular application - Minko Gechev
+immutable list
+angular benchpress tool to check performance
+buffering 
+caching
+it also contians - examples   
+
+   N Things You Didn’t Know About the Router - Deborah Kurata
+mastering routes examples  
+
+    Mastering the Subject: Communication Options in RxJS | Dan Wahlin
+data sharing event bus, subjects ectc
+
+    Ready for Readable Code? - John Papa
+
+
+    
