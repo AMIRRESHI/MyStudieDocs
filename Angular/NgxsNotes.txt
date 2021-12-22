@@ -9,5 +9,26 @@ ngxs-form-examples
 ngxs-pizza-order
 NGXSTutorial
 
+***********************
+
+https://github.com/DanWahlin/reliable-web-summit-swa.git
+https://github.com/DanWahlin/TailwindTraders-M365.git
+https://github.com/DanWahlin/typescript-fundamentals.git
+https://github.com/DanWahlin/Angular-BareBones.git
+https://github.com/DanWahlin/Angular-Core-Concepts.git
+https://github.com/DanWahlin/Angular-DynamicComponentDashboard.git
+https://github.com/DanWahlin/Angular-Forms.git
+https://github.com/DanWahlin/Angular-HelloWorld.git
+https://github.com/DanWahlin/Angular-In120.git
+https://github.com/DanWahlin/Angular-NodeJS-MongoDB-CustomersService.git
+https://github.com/DanWahlin/angular-swapi.git
+https://github.com/DanWahlin/Angular-WebSockets.git
+https://github.com/DanWahlin/AngularAppDevCourseCode.git
+https://github.com/DanWahlin/AngularTypeScript.git
+https://github.com/DanWahlin/AngularTypeScriptExpenseManager.git
+https://github.com/DanWahlin/AngularWorkshopLabs.git
+https://github.com/DanWahlin/DevAppsForTeams.git
+
+
 
 
