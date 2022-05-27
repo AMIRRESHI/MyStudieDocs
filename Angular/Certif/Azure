@@ -1,0 +1,59 @@
+
+Azure:
+https://www.youtube.com/watch?v=NKEFWyqJ5XA
+https://docs.microsoft.com/en-us/learn/certifications/exams/az-900
+
+computing: practice of using remote servers hosted on internet to store, manage & process data
+
+we will be only responsibe for configuring the servers
+4types of cloud services:
+compute
+storage
+network
+database
+
+what is azure
+microsoft calls their clould provider service 
+
+types of cloud computing 
+saas software as a service for customers
+paas platform as a service for developers
+iass Infrastructure as a service for admins to give access to microsoft azure, aws, oracle cloud 
+
+Azure deployment model
+public cloud 
+private
+hybrid
+cross cloud
+
+on prmisee vs Azzure
+implementation
+configuring
+Training
+physical security
+hardware
+it personnel
+maintenance
+
+azure:
+implementation
+configuring
+Training
+
+capital expendture: you have to guess upfront what you plan to spend
+opyionsl expenditure
+
+Cloud architecture terminology
+availibility
+scalibility
+elasticity
+fault tolerance
+disaster recovery
+
+Azure load balancer to evern distribute the traffic to available servers
+*********************************************
+
+
+
+
+msdl certificationMSDL certificationC
