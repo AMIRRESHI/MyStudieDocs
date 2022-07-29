@@ -1,0 +1,51 @@
+Docker container:
+platform shipping, building, running application with containers.. each service will be in its own container.. 
+docker image having an angular code build in container
+docker uses client server arch using rest api. server component is also called as docker engine 
+kubernetes/service fabric is required when docker container gets down to handle this process automatically
+
+deveops lifecycle role of dev ops
+linux basics
+jenkis - better security - perfered
+bamboo can store code - 
+
+
+docker compose
+ takes multiple container & makes them run together  
+
+vm has it own os for each vm
+containers it boots up very fast since its sharing the same os.. its like a process
+
+
+Npm independent company
+github acquired npm microsoft own npm & github
+
+mastering npm
+how npm files are pulled
+what is package.json & package-lock
+what is semantic versioning
+learned some npm package warnings
+
+
+From node 15 onwards if promise is not handled the program will crash
+node will now have its own fecth api
+
+commands
+docker run nginx
+docker ps
+docker ps -a
+docker stop name
+docker rm name
+docker images
+docker rmi nginx
+docker pull Nginx
+you can also run docker in detach mode so as to run it in background
+docker logs name
+docker inspect name
+docker 
+
+https://www.youtube.com/watch?v=fqMOX6JJhGo&t=4069s
+https://www.youtube.com/watch?v=Q2uGhow-s-Q
+
+
+

@@ -209,10 +209,9 @@ sentry: performance tuning
 hot & cold observable
 box sizing
 
-************************************************************************************************
-javascript:
+*************************************javascript***********************************************************
+
 JS objects are muttable: it can be chaged/updated
-`
 for...of skips protoype added, You can stop or break a for...of loop at anytime
 for...in iterate protoype
 for/in and forEach() skip empty elements, also known as "holes", in the array
@@ -288,80 +287,6 @@ ng:deep to bypass angular style encapsulation whatever css comes after ngDeep do
 ngAfterContentChecked: called after the projected content part is checked for changes
 both lifecycle hook are called with every change detection execution 
 
-
-
-
-Docker container:
-platform shipping, building, running application with containers.. each service will be in its own container.. 
-docker image having an angular code build in container
-docker uses client server arch using rest api. server component is also called as docker engine 
-kubernetes/service fabric is required when docker container gets down to handle this process automatically
-
-
-1. Angular POC: To create a dashboard showing kind of widgets in angular
-2. Jira Automation: Fetch data from any Jira end point & put that over excel with some built in functionalities
-
-
-deveops lifecycle role of dev ops
-linux basics
-jenkis - better security - perfered
-bamboo can store code - 
-
-
-Azure:
-https://www.youtube.com/watch?v=NKEFWyqJ5XA
-https://docs.microsoft.com/en-us/learn/certifications/exams/az-900
-
-computing: practice of using remote servers hosted on internet to store, manage & process data
-
-we will be only responsibe for configuring the servers
-4types of cloud services:
-compute
-storage
-network
-database
-
-what is azure
-microsoft calls their clould provider service 
-
-types of cloud computing 
-saas software as a service for customers
-paas platform as a service for developers
-iass Infrastructure as a service for admins to give access to microsoft azure, aws, oracle cloud 
-
-Azure deployment model
-public cloud 
-private
-hybrid
-cross cloud
-
-on prmisee vs Azzure
-implementation
-configuring
-Training
-physical security
-hardware
-it personnel
-maintenance
-
-azure:
-implementation
-configuring
-Training
-
-capital expendture: you have to guess upfront what you plan to spend
-opyionsl expenditure
-
-Cloud architecture terminology
-availibility
-scalibility
-elasticity
-fault tolerance
-disaster recovery
-
-Azure load balancer to evern distribute the traffic to available servers
-
-
 *********demo****************************
 canva.js for canvas
 01944 6357 640
@@ -390,13 +315,14 @@ preloading
 4. custom predictive preloading
 
 
-react 
-take your view layer & find rest of framework, find http, router.. third pary modules
-not much of prereqisite arrow, spread, destructuring
-bginner friendly to starter
-new concepts: handling of api, mangaging state,
-lot of problems that there state management gone through several iterations not 
-contains only js files, all mingled up together
+Angular vs React : 
+React
+	take your view layer & find rest of framework, find http, router.. third pary modules
+	not much of prereqisite arrow, spread, destructuring
+	bginner friendly to starter
+	new concepts: handling of api, mangaging state,
+	lot of problems that there state management gone through several iterations not 
+	contains only js files, all mingled up together
 
 
 
@@ -411,7 +337,7 @@ monorepo video - must learn
 An Introduction to Nx Workspaces - Understanding Nx & Monorepos #1
 
 
-Amazing video
+***************Amazing video***************
 Smarter & Faster Angular Development with Nx | ng-conf & Nx
 shows dependency graph - smart enough to see the connections between apps
 whenever we create a new library it creates path in tsconfig.base.json
@@ -424,6 +350,4 @@ advance nx course
 can we build microfront end with it ? - its how to deploy it.. looks like deployement issue
 
 ***************
-
-msdl certification
 `
