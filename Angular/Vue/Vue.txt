@@ -1,0 +1,65 @@
+amazing official docs
+look at Fritz enterprise boilerplate code
+
+best official docs
+
+
+https://www.youtube.com/watch?v=ccVrP6hSW8o
+best vue Projects
+
+best channel for vue The Net Ninja
+Vue 3 with TypeScript Jump Start
+Vue.js 3 Tutorial
+
+install vetur extention for vuetur
+
+dont put data to be shared in root object instead used vueex state management
+
+setup function we use in vue to set the state or by using refs.. check video for understanding
+ 
+Vue 3 with TypeScript Jump Start
+  
+ 
+teleport concept in vue 3
+option api is used to create the project forexample its having methods mount unmount etc
+
+vue 3 introduced compostition api
+its concept is similar to react hooks 
+
+in options api data function values are reactive however in composition api values are not reactive however there is a workaround for that.. Refs are used to make it reactive
+
+this keyword is not accessible inside setup method
+
+
+refs vs reactive:
+on refs we need to use the .value property to access it
+cant use premivite values with reactives
+
+mutation is syncronous way to update state in store
+dont put async code inside the mutations which is using actions
+
+vue graphical CLI
+
+*************************
+vue guides
+chris frits, aven you, cera grasner, and 
+free workshops for vue vixins 
+
+testing moca or jest/cypress
+*************************
+React: bryan holds, ryan florence  
+
+*************************
+Dyan wahlin angular 
+
+https://github.com/microsoft/TypeScript-Vue-Starter/blob/master/src/vue-shims.d.ts
+
+
+type.d.ts => this file refers to declaring interfaces only & not definition 
+
+**working**
+Heroes-Vue
+vue-getting-started but backend response not coming on ui However backend server is running
+VuePress
+telloapp
+shopathome working with api backend calls.. so data coming
