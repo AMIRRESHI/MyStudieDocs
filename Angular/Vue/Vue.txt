@@ -1,11 +1,20 @@
+Amazing video:
+Should You Use Vue RENDERLESS COMPONENTS 
+    https://www.youtube.com/watch?v=2fuENUWU7Vk
+
 amazing official docs
 look at Fritz enterprise boilerplate code
 
 best official docs
 
 
-https://www.youtube.com/watch?v=ccVrP6hSW8o
+project from this url : https://www.youtube.com/watch?v=ccVrP6hSW8o
 best vue Projects
+- gridsome
+- vuePress
+- vuetify
+- nuxt
+- vuelidate/Veevalidate
 
 best channel for vue The Net Ninja
 Vue 3 with TypeScript Jump Start
@@ -13,37 +22,110 @@ Vue.js 3 Tutorial
 
 install vetur extention for vuetur
 
-dont put data to be shared in root object instead used vueex state management
+dont put data to be shared in root object instead use vueex state management
 
-setup function we use in vue to set the state or by using refs.. check video for understanding
+data is an object that contains data for vue application
+functions: like button click we write in methods object
+methods: we access using this object that refers to the vue instance & we can then call a method this.myMethod();
+computed: these functions are triggered when any value change in that property
+filters: to transform data like angular pipes
+Routing:
+    while switching between routes the component is not recreated it keeps its instance alive.. The fix is to add that variable in watch method
+Getters:    used to put some common logic in state & then can be used as a property.. Also getters has an access to store state
+mapGetters: helper functions to get all getters as an alias name..
+            adding additional getters can be done by ... operator   
+
+mutations:  adding the state in a better way.. mutation means to change the state within the store.  send the state & the object/payload to the mutation method..
+            we call the mutation using this.store.commit('name', payload);
+            other of calling is this.store.commit({
+                type: 'name',
+                payload: payload
+            })
+
+            - mutation is syncronous way to update state in store
+            - dont put async code inside the mutations which is using actions
+
+            mutations are the methods that directly manipulate your store.. so these should always run synchronously .. limitation of mutation is calling an async code.. Now how to fix. Actions is fix
+
+actions: these run before commiting the mutation.. it takes context as an argument.. context is nearly same as that of store but technically not the same since its the different object
+            dispatch an action -> in action call commit
+
+In view component: data property is function returning an object unlike an object
+
  
 Vue 3 with TypeScript Jump Start
   
- 
 teleport concept in vue 3
 option api is used to create the project forexample its having methods mount unmount etc
 
-vue 3 introduced compostition api
+vue 3 introduced composition api
 its concept is similar to react hooks 
+composition api: merges data & methods, computed into setup for view 3
+
+setup method : automatically called by vue when it creates this vue component, its called around the same time when the created life cycle hook would normally be executed 
+        data can be replaced with refs(reactive piece of data) so import it.. it basically creates a kind of javascript variable & keeps an eye on it & update the ui if any change is detected.
+- with refs use .value to access it
+- setup method has an access to prop & context object
+- within setup function we cant access this keyword
+- this keyword is not accessible inside setup method
+- setup function we use in vue to set the state or by using refs.. check video for understanding
+
+
+
+- life cycle hook - https://www.youtube.com/watch?v=hk6OktYj8Fs
+creation - beforeCreate(), created() is the best place to make api calls
+mounting - beforeMount(), mounted()
+updating - beforeUpdate(), updated()
+unmounting - beforeUnmount(), unmounted() => beforeUnmount takes up code for cleanup like removing event listeners from
+Misc - activated(), deactivated(), errorCaptured(), renderTracked(), renderTriggered()
+
+sample proj: 
+    https://github.com/academind/vue-3-update/tree/starting-state/composition-api
+
 
 in options api data function values are reactive however in composition api values are not reactive however there is a workaround for that.. Refs are used to make it reactive
 
-this keyword is not accessible inside setup method
 
+refs vs reactive: both are used to store values
 
-refs vs reactive:
 on refs we need to use the .value property to access it
 cant use premivite values with reactives
 
-mutation is syncronous way to update state in store
-dont put async code inside the mutations which is using actions
+refs:
+    store numbers, strings, booleans
+     
+reactive:
+    store maps & objects   
+
+
+props:
+    - can be validated, can set its default value & type   
+    - it has validator like angular returning true/false
+    - validator is run before component instance is created & computed is not available in props validators
+
+
+
 
 vue graphical CLI
 
+setup & SetupContext
+commit & ActionContext
+RootState
+mutations
+actions
+getters
+StoreOptions in createStore
+lazy loading/ lazy hydration
+
 *************************
-vue guides
-chris frits, aven you, cera grasner, and 
-free workshops for vue vixins 
+usefull extentions 
+sarah.drasner
+copy relative path
+vetur
+
+vue guides :
+chris fritz, aven you, cera drasner, and 
+free workshops for vue mixins 
 
 testing moca or jest/cypress
 *************************
@@ -59,7 +141,10 @@ type.d.ts => this file refers to declaring interfaces only & not definition
 
 **working**
 Heroes-Vue
+shopathome working with api backend calls.. so data coming    - worked with node 14
 vue-getting-started but backend response not coming on ui However backend server is running
-VuePress
+
+VuePress => can be used to create documentation website & also can use custom vue components.. a dummy website demo e.g vuepress blog boilerplate
 telloapp
-shopathome working with api backend calls.. so data coming
+
+Vue Storefront Tutorial - sample proj

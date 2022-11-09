@@ -1,0 +1,5 @@
+amitesh devops
+
+docuemnt.getemetbyid().parentnode.parentnode.previouselementSibling.style.display = "none"
+
+property reviouselementSibling doesnot exist on type node & parentNode
