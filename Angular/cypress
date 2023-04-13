@@ -1,0 +1,9 @@
+it doesnot use selenium.. its open source
+
+it has a timeline feature
+
+test runner mocha which comes internally with cypress
+
+asserstions: 2 types 
+implicit  in this not required to mention assert or expect it internally does that e.g shoudld() & and()
+explicit  here e.g assert() or expect() is required

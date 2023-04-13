@@ -1,0 +1,242 @@
+Amazing video:
+Should You Use Vue RENDERLESS COMPONENTS 
+    https://www.youtube.com/watch?v=2fuENUWU7Vk
+
+amazing official docs
+look at Fritz enterprise boilerplate code
+
+best official docs
+
+
+project from this url : https://www.youtube.com/watch?v=ccVrP6hSW8o
+best vue Projects
+- gridsome
+- vuePress
+- vuetify
+- nuxt
+- vuelidate/Veevalidate
+
+best channel for vue The Net Ninja
+Vue 3 with TypeScript Jump Start
+Vue.js 3 Tutorial
+
+install vetur extention for vuetur
+
+dont put data to be shared in root object instead use vueex state management
+
+data is an object that contains data for vue application
+functions: like button click we write in methods object
+methods: we access using this object that refers to the vue instance & we can then call a method this.myMethod();
+computed: these functions are triggered when any value change in that property
+filters: to transform data like angular pipes
+Routing:
+    while switching between routes the component is not recreated it keeps its instance alive.. The fix is to add that variable in watch method
+Getters:    used to put some common logic in state & then can be used as a property.. Also getters has an access to store state
+mapGetters: helper functions to get all getters as an alias name..
+            adding additional getters can be done by ... operator   
+
+mutations:  adding the state in a better way.. mutation means to change the state within the store.  send the state & the object/payload to the mutation method..
+            we call the mutation using this.store.commit('name', payload);
+            other of calling is this.store.commit({
+                type: 'name',
+                payload: payload
+            })
+
+            - mutation is syncronous way to update state in store
+            - dont put async code inside the mutations which is using actions
+
+            mutations are the methods that directly manipulate your store.. so these should always run synchronously .. limitation of mutation is calling an async code.. Now how to fix. Actions is fix
+
+actions: these run before commiting the mutation.. it takes context as an argument.. context is nearly same as that of store but technically not the same since its the different object
+            dispatch an action -> in action call commit
+
+In view component: data property is function returning an object unlike an object
+
+ 
+Vue 3 with TypeScript Jump Start
+  
+teleport concept in vue 3
+option api is used to create the project forexample its having methods mount unmount etc
+
+vue 3 introduced composition api
+its concept is similar to react hooks 
+composition api: merges data & methods, computed into setup for view 3
+
+setup method : automatically called by vue when it creates this vue component, its called around the same time when the created life cycle hook would normally be executed 
+        data can be replaced with refs(reactive piece of data) so import it.. it basically creates a kind of javascript variable & keeps an eye on it & update the ui if any change is detected.
+- with refs use .value to access it
+- setup method has an access to prop & context object
+- within setup function we cant access this keyword
+- this keyword is not accessible inside setup method
+- setup function we use in vue to set the state or by using refs.. check video for understanding
+
+
+
+- life cycle hook - https://www.youtube.com/watch?v=hk6OktYj8Fs
+creation - beforeCreate(), created() is the best place to make api calls
+mounting - beforeMount(), mounted()
+updating - beforeUpdate(), updated()
+unmounting - beforeUnmount(), unmounted() => beforeUnmount takes up code for cleanup like removing event listeners from
+Misc - activated(), deactivated(), errorCaptured(), renderTracked(), renderTriggered()
+
+sample proj: 
+    https://github.com/academind/vue-3-update/tree/starting-state/composition-api
+
+
+in options api data function values are reactive however in composition api values are not reactive however there is a workaround for that.. Refs are used to make it reactive
+
+
+refs vs reactive: both are used to store values
+
+on refs we need to use the .value property to access it
+cant use premivite values with reactives
+
+refs:
+    store numbers, strings, booleans
+     
+reactive:
+    store maps & objects   
+
+
+props:
+    - can be validated, can set its default value & type   
+    - it has validator like angular returning true/false
+    - validator is run before component instance is created & computed is not available in props validators
+    - camelCased prop names use kebab-cased equivalents in templates
+
+Mixins :
+    - used to share related logic
+
+3 ways to route using router-link.. we can also write exact on router link so match the exact route
+- to decouple component from routerlink we can pass link params using props
+    check johnpapa getting started course   
+
+nested routes/ named views or simpling routes
+named views  = optional to provide data here. specify different content for different parts of the same page e.g left nav for prob2b
+- in dispatch function action we can write a callback function to execute any logic
+- in store state is by default as namespaced even if namespaced is not mentioned.
+- rootstate is not inherited by modules
+
+ winter is coming theme
+
+ vue.config.js contains proxy api to the other backend server
+ create your own package library & push to npm as private true/false
+ now instead of library create web component & use in vue
+use vue vscode snippets by cera drasner
+
+vue cli uses webpack resulting in a much slower and HMR than Vite. Vite doesnt support old browsers
+
+vuetify, quasar, bootstrap vue
+
+
+
+functional components
+those components that dont hold any state/reactivity & no instance
+
+use of functional is below
+presentational components
+
+High order component: wraps basic functionality
+
+render functions
+are not same as that of functional components
+
+- but functional components can have render functions inside them
+- deep linking for urls
+
+- learn webpack chain
+
+- vue has MIT licencing
+
+- unpkg i the cdn url to be used
+
+- lazy binding for attributes e.g onChange vs input for buttons v-model.lazy.trim
+
+- propagation behavior in vue js. event bubbling/capturing in vue
+
+- key modifiers: common key events in vue like esc, arrow button, enter ... Custom key modifiers can also be created like pressing f1. Reacting to mouse events
+
+- v-cloak is called once the code is compiled
+
+- traversing object properties.. in for loop should in or of be used
+
+- deep watcher.. by default deep is set to false
+
+- in package.json updated the license as MIT
+
+- karma is recommended by vue team for testing, mocha, chai
+
+***webpack**
+- to detect changes on the fly use npm package webpack-hot-middleware & save it for development
+- extract text webpack plugin is used to separate the styles from js file
+
+
+vue graphical CLI
+
+setup & SetupContext
+commit & ActionContext
+RootState
+mutations
+actions
+getters
+StoreOptions in createStore
+lazy loading/ lazy hydration
+
+*************************
+usefull extentions 
+sarah.drasner
+copy relative path
+vetur
+
+vue guides :
+chris fritz, Evan you, Sarah Drasner, and 
+free workshops for vue mixins 
+mixins is used to share data like services.. it can be used to write hooks, computed properties etc
+data is options api
+setup function is composition api.. in setup functions variables are not reactive because it makes sense if included you want reactive or non.. 
+Note: composition function is only executed only once
+
+3 functions to make vue reactive
+
+reactive() = objects => while using reactive .value is not required
+ref()      = objects or primitives => while using refs you need to use .value in setup function to access the value but in the template not required 
+computed() = to execute functions when any of the dependencies in functions change
+
+prop validation:
+    type
+    required
+    validator
+
+- hook can be used to set the initial data to the component e.g in created you can emit. then you dont need to call emit again however we can call its updted life cycle hook sice the data
+is updated for that component
+
+- leaned refs & computed
+- teleport can be used to send/map the data even outside of the vue application
+
+- data sharing unrelated components - using provide & inject
+- using provide you can pass the data from parent to all child components but the same cant be accessed in parent.. however we cant use this.property to pass below. to do this we need to change provide object statement to function statement..
+- moslty use object syntax key vale pair for provide
+- reactivity is broken by changing this reference to user object
+
+testing moca or jest/cypress
+*************************
+React: bryan holds, ryan florence  
+
+*************************
+Dyan wahlin angular 
+
+https://github.com/microsoft/TypeScript-Vue-Starter/blob/master/src/vue-shims.d.ts
+
+
+type.d.ts => this file refers to declaring interfaces only & not definition 
+
+**working**
+tourOfHeroes worked after new installation.. also has live versions working & reac/angular
+Heroes-Vue
+shopathome working with api backend calls.. so data coming    - worked with node 14
+vue-getting-started but backend response not coming on ui However backend server is running
+
+VuePress => can be used to create documentation website & also can use custom vue components.. a dummy website demo e.g vuepress blog boilerplate
+telloapp
+
+Vue Storefront Tutorial - sample proj
